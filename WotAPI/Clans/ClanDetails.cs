@@ -1,0 +1,68 @@
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
+using WotAPI.Api.Response;
+using WotAPI.Clans.General;
+
+/*
+ * @author: BinaryWriter
+ */
+
+namespace WotAPI.Clans
+{
+    public class ClanDetails : IResponse<ClanDetails.ClanDetailsData>
+    {
+        public partial class ClanDetailsData
+        {
+            [JsonProperty("search")]
+            public Details Details;
+        }
+        public partial class Details : Clan
+        {
+            /// <summary> RU: Идентификатор Командующего клана <para> EN: Clan Commander ID </para> </summary>
+            [JsonProperty("leader_id")]
+            public long LeaderID;
+            /// <summary> RU: Время обновления информации о клане <para> EN: Time when clan details were updated </para> </summary>
+            [JsonProperty("updated_at")]
+            public long UpdatedAt;
+            /// <summary> RU: Cекретная информация клана <para> EN: Restricted clan information </para> </summary>
+            [JsonProperty("private")]
+            public object Private;
+            /// <summary> RU: Описание клана в HTML <para> EN: Clan description in HTML </para> </summary>
+            [JsonProperty("description_html")]
+            public string DescriptionHTML;
+            /// <summary> RU: Клан может приглашать игроков <para> EN: </para> Clan can invite players </summary>
+            [JsonProperty("accepts_join_requests")]
+            public bool AcceptsJoinRequests;
+            /// <summary> RU: Имя Командующего <para> EN: Commander's name </para> </summary>
+            [JsonProperty("leader_name")]
+            public string LeaderName;
+            /// <summary> RU: <para> EN: Time (UTC) when clan name was changed </para> </summary>
+            [JsonProperty("renamed_at")]
+            public long RenamedAt;
+            /// <summary> RU: Старый тег клана <para> EN: Old clan tag </para> </summary>
+            [JsonProperty("old_tag")]
+            public string OldTag;
+            /// <summary> RU: Описание клана <para> EN: Clan description </para> </summary>
+            [JsonProperty("description")]
+            public string Description;
+            /// <summary> RU: Информация об игроках клана.Формат поля зависит от входящего параметра members_key <para> EN: Information on clan members. Field format depends on members_key input parameter. </para> </summary>
+            [JsonProperty("members")]
+            public List<ClanMember> Members = new List<ClanMember>();
+            /// <summary> RU: Старое название клана <para> EN: Old clan name </para> </summary>
+            [JsonProperty("old_name")]
+            public string OldName;
+            /// <summary> RU: Клан удалён. Информация об удалённом клане содержит актуальные значения только для следующих полей: clan_id, is_clan_disbanded, updated_at. <para> EN: Clan has been deleted. The deleted clan data contains valid values for the following fields only: clan_id, is_clan_disbanded, updated_at. </para> </summary>
+            [JsonProperty("is_clan_disbanded")]
+            public bool IsClanDisbanded;
+            /// <summary> RU: Девиз клана <para> EN: Clan motto </para> </summary>
+            [JsonProperty("motto")]
+            public string Motto;
+            /// <summary> RU: Имя игрока, создавшего клан <para> EN: Clan creator's name </para> </summary>
+            [JsonProperty("creator_name")]
+            public string CreatorName;
+            /// <summary> RU: Идентификатор игрока, создавшего клан <para> EN: Clan creator ID </para> </summary>
+            [JsonProperty("creator_id")]
+            public long CreatorID;
+        }
+    }
+}
