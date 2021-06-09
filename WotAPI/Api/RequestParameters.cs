@@ -45,7 +45,7 @@ namespace WotAPI.Api
             }
             else if (type == WotApiMethods.AccountDetails)
             {
-                url = WotApiURL + "/account/info/?application_id=" + api.app_ID + "&account_id=" + search;
+                url = WotApiURL + "/account/info/?application_id=" + api.app_ID + "&account_id=" + search + "&extra=statistics.globalmap_absolute%2C+statistics.globalmap_champion%2C+statistics.globalmap_middle%2C+statistics.random";
             }
             else if (type == WotApiMethods.ClansList)
             {
