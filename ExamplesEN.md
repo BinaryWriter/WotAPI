@@ -34,7 +34,7 @@ namespace Examples
                 // Player nickname
                 nickname
             );
-            PlayersList list = api.GetResponse<PlayersList>(parameters);
+            PlayersList list = api.SendRequest<PlayersList>(parameters);
             foreach(PlayersList.Player player in list.Data)
             {
                 if (player.Nickname == nickname)
@@ -83,7 +83,7 @@ namespace Examples
                 // Tank ID in string format
                 tank_id.ToString()
             );
-            return api.GetResponse<TankInfo>(parameters);
+            return api.SendRequest<TankInfo>(parameters);
         }
     }
 }
@@ -124,7 +124,7 @@ namespace Examples
                 // The name of the clan or its tag. If you do not specify this parameter, we will get a list of all the clans
                 clan_name_or_tag
             );
-            Clan[] clans = api.GetResponse<ClansList>(parameters).Data;
+            Clan[] clans = api.SendRequest<ClansList>(parameters).Data;
             return clans[0];
         }
     }
@@ -174,7 +174,7 @@ namespace Examples
                 // Tank ID in string format
                 tank_id.ToString()
             );
-            return api.GetResponse<TankInfo>(parameters);
+            return api.SendRequest<TankInfo>(parameters);
         }
 
         // This method returns information about the custom configuration of the tank. 
@@ -192,7 +192,7 @@ namespace Examples
                 // Additional parameters
                 customModules
             );
-            return api.GetResponse<TankCharacteristic>(parameters);
+            return api.SendRequest<TankCharacteristic>(parameters);
         }
     }
 }

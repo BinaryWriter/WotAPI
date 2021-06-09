@@ -14,7 +14,7 @@ namespace WotAPI.Accounts
             [JsonProperty("nickname")]
             public string Nickname;
             [JsonProperty("account_id")]
-            public int AccountID;
+            public long AccountID;
         }
     }
 }

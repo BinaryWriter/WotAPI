@@ -34,7 +34,7 @@ namespace Examples
                 // Никнейм
                 nickname
             );
-            PlayersList list = api.GetResponse<PlayersList>(parameters);
+            PlayersList list = api.SendRequest<PlayersList>(parameters);
             foreach(PlayersList.Player player in list.Data)
             {
                 if (player.Nickname == nickname)
@@ -83,7 +83,7 @@ namespace Examples
                 // Айди танка в формате string
                 tank_id.ToString()
             );
-            return api.GetResponse<TankInfo>(parameters);
+            return api.SendRequest<TankInfo>(parameters);
         }
     }
 }
@@ -124,7 +124,7 @@ namespace Examples
                 // Название клана или его тег. Если не указывать этот параметр, то мы получим список всех кланов
                 clan_name_or_tag
             );
-            Clan[] clans = api.GetResponse<ClansList>(parameters).Data;
+            Clan[] clans = api.SendRequest<ClansList>(parameters).Data;
             return clans[0];
         }
     }
@@ -174,7 +174,7 @@ namespace Examples
                 // Айди танка в формате string
                 tank_id.ToString()
             );
-            return api.GetResponse<TankInfo>(parameters);
+            return api.SendRequest<TankInfo>(parameters);
         }
 
         // Этот метод возвращает информацию о кастомной конфигурации техники. 
@@ -192,7 +192,7 @@ namespace Examples
                 // Дополнительные параметры
                 customModules
             );
-            return api.GetResponse<TankCharacteristic>(parameters);
+            return api.SendRequest<TankCharacteristic>(parameters);
         }
     }
 }
