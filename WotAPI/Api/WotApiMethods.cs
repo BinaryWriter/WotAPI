@@ -116,6 +116,11 @@ namespace WotAPI.Api
         /// RU: Метод возвращает общую информацию и боевую статистику кланов в режиме «Укрепрайон». Обратите внимание, что информация о количестве проведённых боёв, а также количестве побед и поражений клана обновляется один раз в сутки
         /// <para> EN: Method returns general information and the battle statistics of clans in the Stronghold mode. Please note that information about the number of battles fought as well as the number of defeats and victories is updated once every 24 hours </para>
         /// </summary>
-        StrongholdsClanInfo
+        StrongholdsClanInfo,
+        /// <summary>
+        /// RU: Метод возвращает данные клана на Глобальной Карте
+        /// <para> EN: Method returns clan data on the Global Map </para>
+        /// </summary>
+        GlobalMapClanInfo
     }
 }

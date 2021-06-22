@@ -24,9 +24,6 @@ namespace WotAPI.Clans
             /// <summary> RU: Время обновления информации о клане <para> EN: Time when clan details were updated </para> </summary>
             [JsonProperty("updated_at")]
             public long UpdatedAt;
-            /// <summary> RU: Cекретная информация клана <para> EN: Restricted clan information </para> </summary>
-            [JsonProperty("private")]
-            public object Private;
             /// <summary> RU: Описание клана в HTML <para> EN: Clan description in HTML </para> </summary>
             [JsonProperty("description_html")]
             public string DescriptionHTML;

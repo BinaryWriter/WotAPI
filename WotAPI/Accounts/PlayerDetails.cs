@@ -31,15 +31,12 @@ namespace WotAPI.Accounts
             /// <summary> RU: Дата обновления информации об игроке <para> EN: Date when player details were updated </para> </summary>
             [JsonProperty("updated_at")]
             public long UpdatedAt;
-            /// <summary> RU: Приватные данные игрока <para> EN: Player's private data </para> </summary>
-            [JsonProperty("private")]
-            public object Private;
             /// <summary> RU: Личный рейтинг <para> EN: Personal rating </para> </summary>
             [JsonProperty("global_rating")]
             public long GlobalRating;
             /// <summary> RU: Идентификатор клана <para> EN: Clan ID </para> </summary>
             [JsonProperty("clan_id")]
-            public long ClanId;
+            public long ClanID;
             /// <summary> RU: Статистика игрока <para> EN: Player statistics</para> </summary>
             [JsonProperty("statistics")]
             public Statistics Statistics;
@@ -105,16 +102,16 @@ namespace WotAPI.Accounts
             public int Spotted;
             /// <summary> RU: Количество боёв на технике, причиняющей оглушение <para> EN: Number of battles on vehicles that cause the stun effect</para> </summary>
             [JsonProperty("battles_on_stunning_vehicles")]
-            public int Battles_On_Stunning_Vehicles;
+            public int BattlesOnStunningVehicles;
             /// <summary> RU: Количество полученных прямых попаданий <para> EN: Direct hits received </para> </summary>
             [JsonProperty("direct_hits_received")]
-            public int Direct_Hits_Received;
+            public int DirectHitsReceived;
             /// <summary> RU: Количество нанесённых осколочно-фугасных попаданий <para> EN: Hits on enemy as a result of splash damage</para> </summary>
             [JsonProperty("explosion_hits")]
-            public int Explosion_Hits;
+            public int ExplosionHits;
             /// <summary> RU: Количество полученных пробитий <para> EN: Penetrations received </para> </summary>
             [JsonProperty("piercings_received")]
-            public int Piercings_Received;
+            public int PiercingsReceived;
             /// <summary> RU: Количество пробитий <para> EN: Penetrations </para> </summary>
             [JsonProperty("piercings")]
             public int Piercings;
@@ -123,13 +120,13 @@ namespace WotAPI.Accounts
             public int Xp;
             /// <summary> RU: Выжил в боях <para> EN: Battles survived </para> </summary>
             [JsonProperty("survived_battles")]
-            public int Survived_Battles;
+            public int SurvivedBattles;
             /// <summary> RU: Очки защиты базы <para> EN: Base defense points </para> </summary>
             [JsonProperty("dropped_capture_points")]
-            public int Dropped_Capture_Points;
+            public int DroppedCapturePoints;
             /// <summary> RU: Процент попаданий <para> EN: Hit ratio </para> </summary>
             [JsonProperty("hits_percents")]
-            public int Hits_Percents;
+            public int HitsPercents;
             /// <summary> RU: Ничьи <para> EN: Draws </para> </summary>
             [JsonProperty("draws")]
             public int Draws;
@@ -138,25 +135,25 @@ namespace WotAPI.Accounts
             public int Battles;
             /// <summary> RU: Получено урона <para> EN: Damage received </para> </summary>
             [JsonProperty("damage_received")]
-            public int Damage_Received;
+            public int DamageReceived;
             /// <summary> RU: Уничтожено техники <para> EN: Vehicles destroyed </para> </summary>
             [JsonProperty("frags")]
             public int Frags;
             /// <summary> RU: Количество оглушений, причинённых экипажу противника <para> EN: Number of times an enemy was stunned by you</para> </summary>
             [JsonProperty("stun_number")]
-            public int Stun_Number;
+            public int StunNumber;
             /// <summary> RU: Очки захвата базы <para> EN: Base capture points </para> </summary>
             [JsonProperty("capture_points")]
-            public int Capture_Points;
+            public int CapturePoints;
             /// <summary> RU: Урон по оглушённым вами целям <para> EN: Damage to enemy vehicles stunned by you </para> </summary>
             [JsonProperty("stun_assisted_damage")]
-            public int Stun_Assisted_Damage;
+            public int StunAssistedDamage;
             /// <summary> RU: Попадания <para> EN: Hits </para> </summary>
             [JsonProperty("hits")]
             public int Hits;
             /// <summary> RU: Средний опыт за бой <para> EN: Average experience per battle </para> </summary>
             [JsonProperty("battle_avg_xp")]
-            public int Battle_Avg_Xp;
+            public int BattleAvgXp;
             /// <summary> RU: Победы <para> EN: Victories </para> </summary>
             [JsonProperty("wins")]
             public int Wins;
@@ -165,77 +162,77 @@ namespace WotAPI.Accounts
             public int Losses;
             /// <summary> RU: Нанесено повреждений <para> EN: Damage caused </para> </summary>
             [JsonProperty("damage_dealt")]
-            public int Damage_Dealt;
+            public int DamageDealt;
             /// <summary> RU: Количество полученных прямых попаданий, не нанёсших урон <para> EN: Direct hits received that caused no damage </para> </summary>
             [JsonProperty("no_damage_direct_hits_received")]
-            public int No_Damage_Direct_Hits_Received;
+            public int NoDamageDirectHitsReceived;
             /// <summary> RU: Произведено выстрелов <para> EN: Shots fired </para> </summary>
             [JsonProperty("shots")]
             public int Shots;
             /// <summary> RU: Количество полученных осколочно-фугасных попаданий <para> EN: Hits received as a result of splash damage</para> </summary>
             [JsonProperty("explosion_hits_received")]
-            public int Explosion_Hits_Received;
+            public int ExplosionHitsReceived;
             /// <summary> RU: Отношение заблокированного бронёй урона к полученному игроком урону от бронебойных, кумулятивных, подкалиберных снарядов. Значение считается с версии игры 9.0 <para> EN: Ratio of damage blocked by armor from AP, HEAT, and APCR shells to damage received from these types of shells. Value is calculated starting from version 9.0 </para> </summary>
             [JsonProperty("tanking_factor")]
-            public double Tanking_Factor;
+            public double TankingFactor;
         }
         public partial class OnlyAvg : Base
         {
             /// <summary> RU: Средний заблокированный бронёй урон за бой.Заблокированный бронёй урон — это урон от снарядов (бронебойных, кумулятивных и подкалиберных), которые попали в танк, но не нанесли урона.Значение считается с версии игры 9.0 
             /// <para> EN: Average damage blocked by armor per battle. Damage blocked by armor is damage received from shells(AP, HEAT and APCR) that hit a vehicle but caused no damage. Value is calculated starting from version 9.0 </para> </summary>
             [JsonProperty("avg_damage_blocked")]
-            public double Avg_Damage_Blocked;
+            public double AvgDamageBlocked;
             /// <summary> RU: Средний урон, нанесённый с вашей помощью.Значение считается с версии игры 8.8 <para> EN: Average damage caused with your assistance</para> </summary>
             [JsonProperty("avg_damage_assisted")]
-            public double Avg_Damage_Assisted;
+            public double AvgDamageAssisted;
             /// <summary> RU: Средний урон после вашего попадания, сбившего гусеницу. Значение считается с версии игры 8.8 <para> EN: Average damage upon your shooting the track </para> </summary>
             [JsonProperty("avg_damage_assisted_track")]
-            public double Avg_Damage_Assisted_Track;
+            public double AvgDamageAssistedTrack;
             /// <summary> RU: Средний урон по вашим разведданным. Значение считается с версии игры 8.8 <para> EN: Average damage upon your spotting </para> </summary>
             [JsonProperty("avg_damage_assisted_radio")]
-            public double Avg_Damage_Assisted_Radio;
+            public double AvgDamageAssistedRadio;
         }
         public partial class OnlyMax : Base
         {
             /// <summary> RU: Максимальный опыт за бой <para> EN: Maximum experience per battle </para> </summary>
             [JsonProperty("max_xp")]
-            public int Max_Xp;
+            public int MaxXp;
             /// <summary> RU: Техника, на которой был нанесён максимальный урон за бой <para> EN: Vehicle used to cause maximum damage </para> </summary>
             [JsonProperty("max_damage_tank_id")]
-            public int Max_Damage_Tank_Id;
+            public int MaxDamageTankID;
             /// <summary> RU: Техника, на которой получен максимальный опыт за бой <para> EN: Vehicle used to gain maximum experience per battle </para> </summary>
             [JsonProperty("max_xp_tank_id")]
-            public int Max_Xp_Tank_Id;
+            public int MaxXpTankID;
             /// <summary> RU: Техника, на которой уничтожено максимальное количество противников за бой <para> EN: Vehicle, in which maximum number of enemy vehicles was destroyed </para> </summary>
             [JsonProperty("max_frags_tank_id")]
-            public int Max_Frags_Tank_Id;
+            public int MaxFragsTankID;
             /// <summary> RU: Максимальный урон за бой <para> EN: Maximum damage caused in a battle </para> </summary>
             [JsonProperty("max_damage")]
-            public int Max_Damage;
+            public int MaxDamage;
             /// <summary> RU: Максимум уничтожено за бой <para> EN: Maximum destroyed in battle </para> </summary>
             [JsonProperty("max_frags")]
-            public int Max_Frags;
+            public int MaxFrags;
         }
         public partial class MaxAndAvg : OnlyAvg
         {
             /// <summary> RU: Максимальный опыт за бой <para> EN: Maximum experience per battle </para> </summary>
             [JsonProperty("max_xp")]
-            public int Max_Xp;
+            public int MaxXp;
             /// <summary> RU: Техника, на которой был нанесён максимальный урон за бой <para> EN: Vehicle used to cause maximum damage </para> </summary>
             [JsonProperty("max_damage_tank_id")]
-            public int Max_Damage_Tank_Id;
+            public int MaxDamageTankID;
             /// <summary> RU: Техника, на которой получен максимальный опыт за бой <para> EN: Vehicle used to gain maximum experience per battle </para> </summary>
             [JsonProperty("max_xp_tank_id")]
-            public int Max_Xp_Tank_Id;
+            public int MaxXpTankID;
             /// <summary> RU: Техника, на которой уничтожено максимальное количество противников за бой <para> EN: Vehicle, in which maximum number of enemy vehicles was destroyed </para> </summary>
             [JsonProperty("max_frags_tank_id")]
-            public int Max_Frags_Tank_Id;
+            public int MaxFragsTankID;
             /// <summary> RU: Максимальный урон за бой <para> EN: Maximum damage caused in a battle </para> </summary>
             [JsonProperty("max_damage")]
-            public int Max_Damage;
+            public int MaxDamage;
             /// <summary> RU: Максимум уничтожено за бой <para> EN: Maximum destroyed in battle </para> </summary>
             [JsonProperty("max_frags")]
-            public int Max_Frags;
+            public int MaxFrags;
         }
     }
 }

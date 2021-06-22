@@ -115,6 +115,10 @@ namespace WotAPI.Api
             {
                 url = WotApiURL + "/stronghold/claninfo/?application_id=" + api.app_ID + "&clan_id=" + search;
             }
+            else if (type == WotApiMethods.GlobalMapClanInfo)
+            {
+                url = WotApiURL + "/globalmap/claninfo/?application_id=" + api.app_ID + "&clan_id=" + search;
+            }
             if (page != 1)
             {
                 url += "&page_no=" + page;

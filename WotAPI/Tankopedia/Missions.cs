@@ -124,7 +124,7 @@ namespace WotAPI.Tankopedia
                 /// <summary> RU: Свободный опыт <para> EN: Free Experience </para></summary>
                 [JsonProperty("free_xp")]
                 public int FreeXp;
-                /// <summary> RU: Список оборудования или расходников в формате идентификатор - количество единиц <para> EN: List of equipment or consumables in the following format: Id–number of items </para></summary>
+                /// <summary> RU: Список оборудования или расходников в формате идентификатор - количество единиц <para> EN: List of equipment or consumables in the following format: ID – number of items </para></summary>
                 [JsonProperty("items")]
                 public Dictionary<string, int> Items = new Dictionary<string, int>();
                 /// <summary> RU: Токены <para> EN: Tokens </para></summary>

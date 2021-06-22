@@ -1,10 +1,9 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WotAPI.Api.Response;
+
+/*
+ * @author: BinaryWriter
+ */
 
 namespace WotAPI.Strongholds
 {
@@ -79,7 +78,7 @@ namespace WotAPI.Strongholds
             public string Direction;
             /// <summary> RU: Идентификатор карты, привязанный к текущей стройплощадке <para> EN: Map ID associated with the current construction site </para></summary>
             [JsonProperty("arena_id")]
-            public string ArenaId;
+            public string ArenaID;
             /// <summary> RU: Название Резерва, заработанного в строении, расположенном на текущей стройплощадке <para> EN: Name of the Reserve earned in the structure located on the current construction site</para></summary>
             [JsonProperty("reserve_title")]
             public string ReserveTitle;
