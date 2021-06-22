@@ -46,7 +46,8 @@
   <ItemGroup>
     <Compile Include="Api\RequestParameters.cs" />
     <Compile Include="Api\WotApi.cs" />
-    <Compile Include="Api\ApiRegion.cs" />
+    <Compile Include="Api\WotApiRegion.cs" />
+    <Compile Include="GlobalMap\ClanInfo.cs" />
     <Compile Include="Strongholds\ClanInfo.cs" />
     <Compile Include="Tankopedia\Achievements.cs" />
     <Compile Include="Tankopedia\Arenas.cs" />
