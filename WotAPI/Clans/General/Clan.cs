@@ -24,7 +24,7 @@ namespace WotAPI.Clans.General
         /// <summary> RU: Тег клана <para> EN: Clan tag </para> </summary>
         [JsonProperty("tag")]
         public string Tag;
-        /// <summary> RU: Информация об эмблемах клана в играх и на клановом портале <para> EN: </para> </summary>
+        /// <summary> RU: Информация об эмблемах клана в играх и на клановом портале <para> EN: Information on clan emblems in games and on clan portal </para> </summary>
         [JsonProperty("emblems")]
         public Dictionary<string, Dictionary<string, string>> Emblems = new Dictionary<string, Dictionary<string, string>>();
         /// <summary> RU: Идентификатор клана <para> EN: Clan ID </para> </summary>

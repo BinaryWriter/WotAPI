@@ -27,13 +27,13 @@ namespace WotAPI.Clans
             /// <summary> RU: Описание клана в HTML <para> EN: Clan description in HTML </para> </summary>
             [JsonProperty("description_html")]
             public string DescriptionHTML;
-            /// <summary> RU: Клан может приглашать игроков <para> EN: </para> Clan can invite players </summary>
+            /// <summary> RU: Клан может приглашать игроков <para> EN: Clan can invite players </para> </summary>
             [JsonProperty("accepts_join_requests")]
             public bool AcceptsJoinRequests;
             /// <summary> RU: Имя Командующего <para> EN: Commander's name </para> </summary>
             [JsonProperty("leader_name")]
             public string LeaderName;
-            /// <summary> RU: <para> EN: Time (UTC) when clan name was changed </para> </summary>
+            /// <summary> RU: Время последнего переименования клана в UTC <para> EN: Time (UTC) when clan name was changed </para> </summary>
             [JsonProperty("renamed_at")]
             public long RenamedAt;
             /// <summary> RU: Старый тег клана <para> EN: Old clan tag </para> </summary>

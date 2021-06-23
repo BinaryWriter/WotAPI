@@ -25,7 +25,7 @@ namespace WotAPI.Accounts
             /// <summary> RU: Идентификатор аккаунта игрока <para> EN: Player account ID </para> </summary>
             [JsonProperty("account_id")]
             public long AccountID;
-            /// <summary> RU: Дата создания аккаунта игрока <para> EN: </para> Date when player's account was created </summary>
+            /// <summary> RU: Дата создания аккаунта игрока <para> EN: Date when player's account was created </para> </summary>
             [JsonProperty("created_at")]
             public long CreatedAt;
             /// <summary> RU: Дата обновления информации об игроке <para> EN: Date when player details were updated </para> </summary>

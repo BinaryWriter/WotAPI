@@ -309,13 +309,13 @@ namespace WotAPI.Tankopedia.Tanks
         }
         public class IModule
         {
-            /// <summary> RU: Название модуля <para> EN: </para> Module name </summary>
+            /// <summary> RU: Название модуля <para> EN: Module name </para> </summary>
             [JsonProperty("name")]
             public string Name;
-            /// <summary> RU: Тег модуля <para> EN: </para> Module tag </summary>
+            /// <summary> RU: Тег модуля <para> EN: Module tag </para> </summary>
             [JsonProperty("tag")]
             public string Tag;
-            /// <summary> RU: Уровень <para> EN: </para> Tier </summary>
+            /// <summary> RU: Уровень <para> EN: Tier </para> </summary>
             [JsonProperty("tier")]
             public int Tier;
         }
@@ -357,7 +357,7 @@ namespace WotAPI.Tankopedia.Tanks
             /// <summary> RU: Дальность связи <para> EN: Signal range </para> </summary>
             [JsonProperty("signal_range")]
             public int Signal_Range;
-            /// <summary> RU: Масса (кг) <para> EN: </para> Weight (kg) </summary>
+            /// <summary> RU: Масса (кг) <para> EN: Weight (kg) </para> </summary>
             [JsonProperty("weight")]
             public int Weight;
         }

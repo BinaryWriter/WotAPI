@@ -71,7 +71,7 @@ namespace WotAPI.Tankopedia
         {
             /// <summary> RU: Перечень ссылок на эмблемы 180x180 px <para> EN: List of links to 180x180 px emblems </para> </summary>
             public string[] x180;
-            /// <summary> RU: Перечень ссылок на эмблемы 67x71 px Тип <para> EN: </para> List of links to 67x71 px emblems </summary>
+            /// <summary> RU: Перечень ссылок на эмблемы 67x71 px <para> EN: List of links to 67x71 px emblems </para> </summary>
             public string[] x71;
             /// <summary> RU: Перечень ссылок на эмблемы 95x85 px <para> EN: List of links to 95x85 px emblems </para> </summary>
             public string[] x85;

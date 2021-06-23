@@ -61,7 +61,7 @@ namespace WotAPI.GlobalMap
             /// <summary> RU: Количество поражений <para> EN: Defeats </para> </summary>
             [JsonProperty("losses")]
             public int Losses;
-            /// <summary> RU: Количество боёв <para> EN: </para> </summary>
+            /// <summary> RU: Количество боёв <para> EN: Battles fought </para> </summary>
             [JsonProperty("battles")]
             public int Battles;
             /// <summary> RU: Количество боёв Чемпионском дивизионе <para> EN: Battles fought in Champion division </para> </summary>

@@ -78,7 +78,7 @@ namespace WotAPI.Tankopedia
             /// <summary> RU: Минимальный уровень техники <para> EN: Minimum vehicle Tier </para></summary>
             [JsonProperty("min_level")]
             public int MinLevel;
-            /// <summary> RU:  <para> EN: Rewards grouped by mission conditions </para></summary>
+            /// <summary> RU: Награды, сгруппированые по условию задачи <para> EN: Rewards grouped by mission conditions </para></summary>
             [JsonProperty("rewards")]
             public MissionRewards Rewards;
             /// <summary> RU: Название задачи <para> EN: Mission name </para></summary>
