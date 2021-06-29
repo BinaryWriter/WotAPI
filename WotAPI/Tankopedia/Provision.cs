@@ -8,9 +8,9 @@ using WotAPI.Api.Response;
 
 namespace WotAPI.Tankopedia
 {
-    public class Provision : IResponse<Dictionary<string, Provision.ProvisionInfo>>
+    public class Provision : IResponse<Dictionary<string, Provision.ProvisionData>>
     {
-        public partial class ProvisionInfo
+        public partial class ProvisionData
         {
             /// <summary> RU: Название снаряжения или оборудования <para> EN: Consumables or equipment name </para></summary>
             [JsonProperty("name")]

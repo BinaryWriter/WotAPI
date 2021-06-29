@@ -8,9 +8,9 @@ using WotAPI.Api.Response;
 
 namespace WotAPI.Tankopedia
 {
-    public class TankopediaInfo : IResponse<TankopediaInfo.Info>
+    public class TankopediaInfo : IResponse<TankopediaInfo.TankopediaInfoData>
     {
-        public partial class Info
+        public partial class TankopediaInfoData
         {
             /// <summary> RU: Версия игрового клиента <para> EN: Game client version </para></summary>
             [JsonProperty("game_version")]

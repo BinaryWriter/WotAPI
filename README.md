@@ -24,27 +24,25 @@ WotApi api = new WotApi("Application ID", ApiRegion.EU);
 
 Выполнение запроса:
 ```C#
-  RequestParameters parameters = new RequestParameters(Methods.Method, WotApi, ["search"], [page], [parameters]);
-  ResponseClass clazz = api.SendRequest<ResponseClass>(parameters);
+  RequestParameters<ResponseClass> parameters = new RequestParameters<ResponseClass>(WotApi, ["search"], [page], [parameters]);
+  ResponseClass clazz = parameters.Send();
 ```
-* Methods.Method - Один из доступных методов. Вы можете ознакомится с ними на [сайте Wargaming](https://developers.wargaming.net/reference/all/wot) (Method)
 * WotApi - Апи который перед этим надо создать (WotApi)
 * ["search"] - Если ваш метод производит поиск чего-либо то вам стоит указать этот параметр (Необязательно указывать) (string)
 * [page] - Номер страницы (Необязательно указывать) (int) 
-* [parameters] - Дополнительные параметры (Необязательно указывать) (Dictionary<string, string>)
+* [parameters] - Дополнительные параметры (Необязательно указывать) (Dictionary<string, object>)
 * ResponseClass - Один из классов ответа
 
 Request execution:
 ```C#
-  RequestParameters parameters = new RequestParameters(Methods.Method, WotApi, ["search"], [page], [parameters]);
-  ResponseClass clazz = api.sendRequest<ResponseClass>(parameters);
+  RequestParameters<ResponseClass> parameters = new RequestParameters<ResponseClass>(WotApi, ["search"], [page], [parameters]);
+  ResponseClass clazz = parameters.Send();
 ```
 
-* Methods.Method - One of the available methods. You can find them at [Wargaming](https://developers.wargaming.net/reference/all/wot) (Method)
 * WotApi - API which you need to create (WotApi)
 * ["search"] - If your method searches for something that you should specify this parameter (Optional) (string)
 * [page] - Page Number (Optional) (int) 
-* [parameters] - Additional parameters (Optional) (Dictionary<string, string>)
+* [parameters] - Additional parameters (Optional) (Dictionary<string, object>)
 * ResponseСlass - One of the response classes
 
 Дополнительная информация | Additional information: <br>

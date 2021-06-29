@@ -7,9 +7,9 @@ using WotAPI.Api.Response;
 
 namespace WotAPI.GlobalMap
 {
-    public class ClanInfo : IResponse<ClanInfo.ClanInfoData>
+    public class GlobalMapClanInfo : IResponse<GlobalMapClanInfo.GlobalMapClanInfoData>
     {
-        public partial class ClanInfoData
+        public partial class GlobalMapClanInfoData
         {
             [JsonProperty("search")]
             public Info Info;

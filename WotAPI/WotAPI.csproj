@@ -49,8 +49,9 @@
     <Compile Include="Api\RequestParameters.cs" />
     <Compile Include="Api\WotApi.cs" />
     <Compile Include="Api\WotApiRegion.cs" />
-    <Compile Include="GlobalMap\ClanInfo.cs" />
-    <Compile Include="Strongholds\ClanInfo.cs" />
+    <Compile Include="GlobalMap\GlobalMapClanInfo.cs" />
+    <Compile Include="GlobalMap\GlobalMapInfo.cs" />
+    <Compile Include="Strongholds\StrongholdsClanInfo.cs" />
     <Compile Include="Tankopedia\Achievements.cs" />
     <Compile Include="Tankopedia\Arenas.cs" />
     <Compile Include="Tankopedia\Badges.cs" />

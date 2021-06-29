@@ -1,8 +1,4 @@
-﻿using Newtonsoft.Json;
-using System.Net;
-using System.Text;
-
-/*
+﻿/*
  * @author: BinaryWriter
  */
 
@@ -32,18 +28,6 @@ namespace WotAPI.Api
             {
                 this.region = "asia";
             }
-        }
-        public T SendRequest<T>(RequestParameters p)
-        {
-            WebClient client = new WebClient() { Encoding = Encoding.UTF8 };
-
-            string text = client.DownloadString(p.url).Replace($"\"{p.search}\":", "\"search\":");
-            T json = JsonConvert.DeserializeObject<T>(text, new JsonSerializerSettings
-            {
-                NullValueHandling = NullValueHandling.Ignore
-            });
-
-            return json;
         }
     }
 }

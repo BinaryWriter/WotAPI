@@ -16,9 +16,9 @@ namespace Examples
     {
         static void Main(string[] args)
         {
-           WotApi api = new WotApi("Application ID", WotApiRegion.EU);
+           var api = new WotApi("Application ID", WotApiRegion.EU);
            // Getting a player with name Dev
-           PlayersList.Player player = GetPlayer("Dev");
+           var player = GetPlayer("Dev", api);
            // Output of its id
            Console.WriteLine("Dev player ID:" + player.AccountID);
            Console.ReadKey();
@@ -27,15 +27,9 @@ namespace Examples
         // This method returns a player with the same name
         static PlayersList.Player GetPlayer(string nickname, WotApi api)
         {
-            RequestParameters parameters = new RequestParameters(
-                // Method for getting a list of players with a similar nickname
-                WotApiMethods.AccountsList,
-                api,
-                // Player nickname
-                nickname
-            );
-            PlayersList list = api.SendRequest<PlayersList>(parameters);
-            foreach(PlayersList.Player player in list.Data)
+            var parameters = new RequestParameters<PlayersList>(api, nickname);
+            var list = parameters.Send();
+            foreach(var player in list.Data)
             {
                 if (player.Nickname == nickname)
                 {
@@ -65,9 +59,9 @@ namespace Examples
     {
         static void Main(string[] args)
         {
-           WotApi api = new WotApi("Application ID", WotApiRegion.EU);
+           var api = new WotApi("Application ID", WotApiRegion.EU);
            // Getting information about a tank with ID 1537
-           TankInfo.Info tankInfo = GetTankInfo(1537, api).Data.Info;
+           var tankInfo = GetTankInfo(1537, api).Data.Info;
            // Output of the tank name
            Console.WriteLine(tankInfo.ShortName);
            Console.ReadKey();
@@ -76,14 +70,8 @@ namespace Examples
         // This method returns information about the tank with the default configuration
         static TankInfo GetTankInfo(int tank_id, WotApi api)
         {
-            RequestParameters parameters = new RequestParameters(
-                // Method for getting information about a tank
-                WotApiMethods.TankopediaTankInfo,
-                api,
-                // Tank ID in string format
-                tank_id.ToString()
-            );
-            return api.SendRequest<TankInfo>(parameters);
+            var parameters = new RequestParameters<TankInfo>(api, tank_id);
+            return parameters.Send();
         }
     }
 }
@@ -106,9 +94,9 @@ namespace Examples
     {
         static void Main(string[] args)
         {
-           WotApi api = new WotApi("Application ID", WotApiRegion.EU);
+           var api = new WotApi("Application ID", WotApiRegion.EU);
            // Getting a clan with the name - Clan Name
-           Clan clan = GetClan("Clan Name", api);
+           var clan = GetClan("Clan Name", api);
            // Output of count of clan members
            Console.WriteLine("Clan Name members count: " + clan.MembersCount);
            Console.ReadKey();
@@ -117,14 +105,8 @@ namespace Examples
         // This method returns a clan with the same tag or name
         static Clan GetClan(string clan_name_or_tag, WotApi api)
         {
-            RequestParameters parameters = new RequestParameters(
-                // Method for getting a list of clans
-                WotApiMethods.ClansList,
-                api,
-                // The name of the clan or its tag. If you do not specify this parameter, we will get a list of all the clans
-                clan_name_or_tag
-            );
-            Clan[] clans = api.SendRequest<ClansList>(parameters).Data;
+            var parameters = new RequestParameters<ClansList>(api, clan_name_or_tag);
+            var clans = parameters.Send().Data;
             return clans[0];
         }
     }
@@ -148,17 +130,17 @@ namespace Examples
     {
         static void Main(string[] args)
         {
-            WotApi api = new WotApi("Application ID", WotApiRegion.EU);
+            var api = new WotApi("Application ID", WotApiRegion.EU);
             // Getting information about the T-28
-            TankInfo.Info tankInfo = GetTankInfo(1537, api).Data.Info;
+            var tankInfo = GetTankInfo(1537, api).Data.Info;
             // Get another gun available on the T-28
             int next_gun_id = tankInfo.Guns[1];
             // Creating additional parameters
-            Dictionary<string, string> dopParams = new Dictionary<string, string>();
+            var dopParams = new Dictionary<string, object>();
             // Changing the default gun to another gun
-            dopParams.Add("gun_id", next_gun_id.ToString());
+            dopParams.Add("gun_id", next_gun_id);
             // We get a custom configuration with the gun that we replaced the old gun with
-            TankCharacteristic tankCharactersitic = GetTankCharacteristic(1537, dopParams, api);
+            var tankCharactersitic = GetTankCharacteristic(1537, dopParams, api);
             // Output of changes in the tank configuration
             Console.WriteLine($"The {tankInfo.DefaultProfile.Gun.Name} gun was changed to the {tankCharactersitic.Data.Characteristic.Gun.Name}");
             Console.ReadKey();
@@ -167,32 +149,16 @@ namespace Examples
         // This method returns information about the tank with the default configuration
         static TankInfo GetTankInfo(int tank_id, WotApi api)
         {
-            RequestParameters parameters = new RequestParameters(
-                // Method for getting information about a tank
-                WotApiMethods.TankopediaTankInfo,
-                api,
-                // Tank ID in string format
-                tank_id.ToString()
-            );
-            return api.SendRequest<TankInfo>(parameters);
+            var parameters = new RequestParameters<TankInfo>(api, tank_id);
+            return parameters.Send();
         }
 
         // This method returns information about the custom configuration of the tank. 
         // If you do not specify additional parameters, it will return the default configuration of this tank
-        static TankCharacteristic GetTankCharacteristic(int tank_id, Dictionary<string, string> customModules, WotApi api)
+        static TankCharacteristic GetTankCharacteristic(int tank_id, Dictionary<string, object> customModules, WotApi api)
         {
-            RequestParameters parameters = new RequestParameters(
-                // Method for getting tank characteristic
-                WotApiMethods.TankopediaTankCharacteristic,
-                api,
-                // Tank ID in string format
-                tank_id.ToString(),
-                // First page
-                1,
-                // Additional parameters
-                customModules
-            );
-            return api.SendRequest<TankCharacteristic>(parameters);
+            var parameters = new RequestParameters<TankCharacteristic>(api, tank_id, 1, customModules);
+            return parameters.Send();
         }
     }
 }

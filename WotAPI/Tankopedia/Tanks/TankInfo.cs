@@ -8,9 +8,9 @@ using WotAPI.Api.Response;
 
 namespace WotAPI.Tankopedia.Tanks
 {
-    public class TankInfo : IResponse<TankInfo.TankData>
+    public class TankInfo : IResponse<TankInfo.TankInfoData>
     {
-        public partial class TankData
+        public partial class TankInfoData
         {
             [JsonProperty("search")]
             public Info Info;

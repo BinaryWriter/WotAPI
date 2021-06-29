@@ -7,9 +7,9 @@ using WotAPI.Api.Response;
 
 namespace WotAPI.Strongholds
 {
-    public class ClanInfo : IResponse<ClanInfo.ClanInfoData>
+    public class StrongholdsClanInfo : IResponse<StrongholdsClanInfo.StrongholdsClanInfoData>
     {
-        public partial class ClanInfoData
+        public partial class StrongholdsClanInfoData
         {
             [JsonProperty("search")]
             public Info Info;

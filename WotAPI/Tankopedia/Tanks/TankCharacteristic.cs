@@ -7,9 +7,9 @@ using WotAPI.Api.Response;
 
 namespace WotAPI.Tankopedia.Tanks
 {
-    public class TankCharacteristic : IResponse<TankCharacteristic.TankData>
+    public class TankCharacteristic : IResponse<TankCharacteristic.TankCharacteristicData>
     {
-        public partial class TankData
+        public partial class TankCharacteristicData
         {
             [JsonProperty("search")]
             public TankInfo.TankProfile Characteristic;
