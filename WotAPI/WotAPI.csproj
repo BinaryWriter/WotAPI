@@ -77,7 +77,6 @@
     <Compile Include="Tankopedia\Tanks\TankCharacteristic.cs" />
     <Compile Include="Tankopedia\Tanks\TankInfo.cs" />
     <Compile Include="Api\Response\IResponse.cs" />
-    <Compile Include="Api\WotApiMethods.cs" />
     <Compile Include="Tankopedia\Tanks\TankProfiles.cs" />
   </ItemGroup>
   <ItemGroup>
