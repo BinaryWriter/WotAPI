@@ -97,7 +97,7 @@ namespace WotAPI.Api
             else if (type == typeof(Provision))
             {
                 url = WotApiURL + "/provisions/?application_id=" + api.app_ID;
-                if (search != "")
+                if (this.search != "")
                 {
                     url += "&provision_id=" + this.search;
                 }
