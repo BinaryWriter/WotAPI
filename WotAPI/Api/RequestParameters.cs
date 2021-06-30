@@ -158,6 +158,13 @@ namespace WotAPI.Api
             {
                 NullValueHandling = NullValueHandling.Ignore
             });
+
+            dynamic jsonDynamic = (dynamic)json;
+            if (jsonDynamic.Status == "error")
+            {
+                string message = $"[Code: {jsonDynamic.Error.Code} Field: {jsonDynamic.Error.Field}] {jsonDynamic.Error.Message}";
+                throw new System.Exception(message);
+            }
             return json;
         }
     }
