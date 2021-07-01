@@ -61,7 +61,7 @@ namespace WotAPI.Api
             else if (type == typeof(ClansList))
             {
                 url = WotApiURL + "/clans/list/?application_id=" + api.app_ID;
-                if (this.search != "")
+                if (search != null)
                 {
                     url += "&search=" + this.search;
                 }
@@ -97,7 +97,7 @@ namespace WotAPI.Api
             else if (type == typeof(Provision))
             {
                 url = WotApiURL + "/provisions/?application_id=" + api.app_ID;
-                if (this.search != "")
+                if (search != null)
                 {
                     url += "&provision_id=" + this.search;
                 }
@@ -133,6 +133,13 @@ namespace WotAPI.Api
             else if (type == typeof(GlobalMapInfo))
             {
                 url = WotApiURL + "/globalmap/info/?application_id=" + api.app_ID;
+            }else if (type == typeof(Fronts))
+            {
+                url = WotApiURL + "/globalmap/fronts/?application_id=" + api.app_ID;
+                if (search != null)
+                {
+                    url += "&front_id=" + this.search;
+                }
             }
             if (page != 1)
             {
