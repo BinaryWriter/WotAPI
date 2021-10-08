@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Api\RequestParameters.cs" />
     <Compile Include="Api\WotApi.cs" />
-    <Compile Include="Api\WotApiRegion.cs" />
     <Compile Include="GlobalMap\Fronts.cs" />
     <Compile Include="GlobalMap\GlobalMapClanInfo.cs" />
     <Compile Include="GlobalMap\GlobalMapInfo.cs" />
@@ -61,7 +60,6 @@
     <Compile Include="Tankopedia\Missions.cs" />
     <Compile Include="Tankopedia\Boosters.cs" />
     <Compile Include="Tankopedia\Provision.cs" />
-    <Compile Include="Tankopedia\Tanks\TankConfigurations.cs" />
     <Compile Include="Tankopedia\TankopediaInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Accounts\PlayerAchievements.cs" />
