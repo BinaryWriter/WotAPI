@@ -74,13 +74,17 @@ namespace WotAPI.Api
             {
                 url = WotApiURL + "/clans/glossary/?application_id=" + api.app_ID;
             }
+            else if (type == typeof(ClanMemberDetails))
+            {
+                url = WotApiURL + "/clans/accountinfo/?application_id=" + api.app_ID + "&account_id=" + this.search; 
+            }
             else if (type == typeof(ClanHistory))
             {
                 url = WotApiURL + "/clans/memberhistory/?application_id=" + api.app_ID + "&account_id" + this.search;
             }
             else if (type == typeof(TankInfo))
             {
-                url = WotApiURL + "/encyclopedia/vehicles/?application_id=" + api.app_ID + "&tank_id=" + this.search; ;
+                url = WotApiURL + "/encyclopedia/vehicles/?application_id=" + api.app_ID + "&tank_id=" + this.search;
             }
             else if (type == typeof(Achievements))
             {
@@ -150,7 +154,7 @@ namespace WotAPI.Api
             {
                 foreach (var pair in parameters)
                 {
-                    string a = $"&{pair.Key}={pair.Value.ToString()}";
+                    string a = $"&{pair.Key}={pair.Value}";
                     url += a;
                 }
             }
@@ -165,6 +169,8 @@ namespace WotAPI.Api
             {
                 NullValueHandling = NullValueHandling.Ignore
             });
+
+            json.GetType().GetField("JsonCode").SetValue(json, text);
 
             dynamic jsonDynamic = (dynamic)json;
             if (jsonDynamic.Status == "error")

@@ -8,6 +8,8 @@ namespace WotAPI.Api.Response
 {
     public class IResponse<T>
     {
+        public string JsonCode;
+
         [JsonProperty("status")]
         public string Status;
         [JsonProperty("meta")]

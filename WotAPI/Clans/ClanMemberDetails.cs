@@ -1,11 +1,12 @@
 ﻿using Newtonsoft.Json;
+using WotAPI.Api.Response;
 using WotAPI.Clans.General;
 
 /*
  * @author: BinaryWriter
  */
 
-namespace WotAPI.Api.Response.Clans
+namespace WotAPI.Clans
 {
     public class ClanMemberDetails : IResponse<ClanMemberDetails.ClanMemberData>
     {
