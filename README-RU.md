@@ -1,31 +1,30 @@
-## WotAPI - C# library for getting data about World of Tanks
+## WotAPI - Библиотека на языке C# для получения данных о World of Tanks
 [![Release](https://img.shields.io/github/v/release/BinaryWriter/WotAPI)](https://github.com/BinaryWriter/WotAPI/releases) [![Repo Size](https://img.shields.io/github/repo-size/BinaryWriter/WotAPI)](https://github.com/BinaryWriter/WotAPI) [![Issues](https://img.shields.io/github/issues/BinaryWriter/WotAPI)](https://github.com/BinaryWriter/WotAPI/issues) [![Pull Requests](https://img.shields.io/github/issues-pr/BinaryWriter/WotAPI)](https://github.com/BinaryWriter/WotAPI/pulls)
 
 - **README in other languages** - [RU](https://github.com/BinaryWriter/WotAPI/blob/master/README-RU.md), [EN](https://github.com/BinaryWriter/WotAPI/blob/master/README.md)
-- [**Examples of working with the library**](https://github.com/BinaryWriter/WotAPI/blob/master/EXAMPLES.md)
+- [**Примеры работы с библиотекой**](https://github.com/BinaryWriter/WotAPI/blob/master/EXAMPLES-RU.md)
 ---
-**Creating an instance of the WotApi class to execute requests**
-- **Parameters**
-  - Token - Token for Wargaming Api.  You can get it here - [Wargaming Application](https://developers.wargaming.net/applications/).
-  - Region - Wargaming Api Region. Available - RU, EU, NA, ASIA.
+**Создание экземпляра класса WotApi для выполнение запросов**
+- **Параметры**
+  - Token - Токен для Wargaming Api. Получить его можно тут - [Wargaming Application](https://developers.wargaming.net/applications/).
+  - Region - Регион Wargaming Api. Доступные - RU, EU, NA, ASIA.
 ```CSHARP
 WotApi Api = new WotApi(Token, Region);
 ```
 
-**Request execution**
-- **Generic**
-  - T - Response Class. A class must be inherited from [ResponseClass](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/ResponseClass.cs) and have an attribute [ResponseAttribute](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/ResponseAttribute.cs). Such classes are listed below in the class table.
-- **Parameters**
-  - Search - Object to search for. For example, the player ID. It is not necessary to specify.
-  - Page - Page number. By default, the first one. It is not necessary to specify.
-  - Parameters - Dictionary with additional parameters. It is not necessary to specify.
+**Выполнение запроса**
+- **Обобщения**
+  - T - Класс ответа. Класс должен быть унаследован от [ResponseClass](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/ResponseClass.cs) и иметь аттрибут [ResponseAttribute](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/ResponseAttribute.cs). Такие классы указаны ниже, в таблице классов.
+- **Параметры**
+  - Search - Обьект для поиска. Например ID игрока. Указывать не обязательно.
+  - Page - Номер страницы. По умолчанию первая. Указывать не обязательно.
+  - Parameters - Словарь с дополнительными параметрами. Указывать не обязательно.
 ```CSHARP
 T Response = Api.Get<T>(Search, Page, Parameters);
 ```
-
 ---
-#### Class table
-| Page on developers.wargaming.net | Class in WotAPI |
+#### Таблица классов
+| Страница на developers.wargaming.net | Класс в WotAPI |
 | - | - |
 | https://developers.wargaming.net/reference/all/wot/account/achievements/ | [WotAPI.Api.Accounts.Player.Achievements](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/Api/Accounts/Player/Achievements.cs) |
 | https://developers.wargaming.net/reference/all/wot/account/info/ | [WotAPI.Api.Accounts.Player.Info](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/Api/Accounts/Player/Info.cs) |

@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WotAPI
+{
+    class _
+    {
+    }
+}
+
+[*.{cs,vb}]
+dotnet_style_require_accessibility_modifiers=omit_if_default:silent

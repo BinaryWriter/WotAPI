@@ -34,52 +34,65 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\RequestParameters.cs" />
-    <Compile Include="Api\WotApi.cs" />
-    <Compile Include="GlobalMap\Fronts.cs" />
-    <Compile Include="GlobalMap\GlobalMapClanInfo.cs" />
-    <Compile Include="GlobalMap\GlobalMapInfo.cs" />
-    <Compile Include="Strongholds\StrongholdsClanInfo.cs" />
-    <Compile Include="Tankopedia\Achievements.cs" />
-    <Compile Include="Tankopedia\Arenas.cs" />
-    <Compile Include="Tankopedia\Badges.cs" />
-    <Compile Include="Tankopedia\Crew\CrewRoles.cs" />
-    <Compile Include="Tankopedia\Crew\CrewSkills.cs" />
-    <Compile Include="Tankopedia\Missions.cs" />
-    <Compile Include="Tankopedia\Boosters.cs" />
-    <Compile Include="Tankopedia\Provision.cs" />
-    <Compile Include="Tankopedia\TankopediaInfo.cs" />
+    <Compile Include="Api\Accounts\Players.cs" />
+    <Compile Include="Api\Accounts\Player\Achievements.cs" />
+    <Compile Include="Api\Accounts\Player\Info.cs" />
+    <Compile Include="Api\Accounts\Player\Vehicles.cs" />
+    <Compile Include="Api\Clans\Clans.cs" />
+    <Compile Include="Api\Clans\Clan\Info.cs" />
+    <Compile Include="Api\Clans\Clan\Glossary.cs" />
+    <Compile Include="Api\Clans\Player\Info.cs" />
+    <Compile Include="Api\Clans\Player\History.cs" />
+    <Compile Include="Api\GlobalMap\Clan\Info.cs" />
+    <Compile Include="Api\GlobalMap\Fronts.cs" />
+    <Compile Include="Api\GlobalMap\Status.cs" />
+    <Compile Include="Api\Strongholds\Clan\Info.cs" />
+    <Compile Include="Api\Tankopedia\Achievements.cs" />
+    <Compile Include="Api\Tankopedia\Crew\Roles.cs" />
+    <Compile Include="Api\Tankopedia\Crew\Skills.cs" />
+    <Compile Include="Api\Tankopedia\Maps.cs" />
+    <Compile Include="Api\Tankopedia\Badges.cs" />
+    <Compile Include="Api\Tankopedia\PersonalReserves.cs" />
+    <Compile Include="Api\Tankopedia\Info.cs" />
+    <Compile Include="Api\Tankopedia\PersonalMissions.cs" />
+    <Compile Include="Api\Tankopedia\Equipment.cs" />
+    <Compile Include="Api\Tankopedia\Vehicle\Info.cs" />
+    <Compile Include="Api\Tankopedia\Vehicle\Profile.cs" />
+    <Compile Include="ResponseClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Accounts\PlayerAchievements.cs" />
-    <Compile Include="Accounts\PlayerDetails.cs" />
-    <Compile Include="Accounts\PlayersList.cs" />
-    <Compile Include="Accounts\PlayerVehicles.cs" />
-    <Compile Include="Clans\ClanDetails.cs" />
-    <Compile Include="Clans\ClanGlossary.cs" />
-    <Compile Include="Clans\ClanHistory.cs" />
-    <Compile Include="Clans\ClanMemberDetails.cs" />
-    <Compile Include="Clans\ClansList.cs" />
-    <Compile Include="Clans\General\Clan.cs" />
-    <Compile Include="Clans\General\ClanMember.cs" />
-    <Compile Include="Tankopedia\Tanks\TankCharacteristic.cs" />
-    <Compile Include="Tankopedia\Tanks\TankInfo.cs" />
-    <Compile Include="Api\Response\IResponse.cs" />
-    <Compile Include="Tankopedia\Tanks\TankProfiles.cs" />
+    <Compile Include="ResponseAttribute.cs" />
+    <Compile Include="WotApi.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
