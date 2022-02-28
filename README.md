@@ -45,7 +45,7 @@ T Response = Api.Get<T>(Search, Page, Parameters);
 | https://developers.wargaming.net/reference/all/wot/encyclopedia/info/ | [WotAPI.Api.Tankopedia.Info](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/Api/Tankopedia/Info.cs) |
 | https://developers.wargaming.net/reference/all/wot/encyclopedia/personalmissions/ | [WotAPI.Api.Tankopedia.PersonalMissions](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/Api/Tankopedia/PersonalMissions.cs) |
 | https://developers.wargaming.net/reference/all/wot/encyclopedia/provisions/ | [WotAPI.Api.Tankopedia.Equipment](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/Api/Tankopedia/Equipment.cs) |
-| https://developers.wargaming.net/reference/all/wot/encyclopedia/tankinfo/ | [WotAPI.Api.Tankopedia.Vehicle.Info](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/Api/Tankopedia/Vehicle/Info.cs) |
+| https://developers.wargaming.net/reference/all/wot/encyclopedia/vehicles/ | [WotAPI.Api.Tankopedia.Vehicle.Info](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/Api/Tankopedia/Vehicle/Info.cs) |
 | https://developers.wargaming.net/reference/all/wot/encyclopedia/vehicleprofile/ | [WotAPI.Api.Tankopedia.Vehicle.Profile](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/Api/Tankopedia/Vehicle/Profile.cs) |
 | https://developers.wargaming.net/reference/all/wot/globalmap/claninfo/ | [WotAPI.Api.GlobalMap.Clan.Info](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/Api/GlobalMap/Clan/Info.cs) |
 | https://developers.wargaming.net/reference/all/wot/globalmap/fronts/ | [WotAPI.Api.GlobalMap.Fronts](https://github.com/BinaryWriter/WotAPI/blob/master/WotAPI/Api/GlobalMap/Fronts.cs) |
