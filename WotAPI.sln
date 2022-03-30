@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WotAPI", "WotAPI\WotAPI.csproj", "{6EE17CA0-3E77-420C-9358-A283656FDC87}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{94064F4F-2DB8-4F03-A518-617335D566D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WotAPI", "src\WotAPI\WotAPI.csproj", "{5E56E5EB-BBFF-4319-9C71-DD82B41A5926}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6EE17CA0-3E77-420C-9358-A283656FDC87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6EE17CA0-3E77-420C-9358-A283656FDC87}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6EE17CA0-3E77-420C-9358-A283656FDC87}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6EE17CA0-3E77-420C-9358-A283656FDC87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E56E5EB-BBFF-4319-9C71-DD82B41A5926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E56E5EB-BBFF-4319-9C71-DD82B41A5926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E56E5EB-BBFF-4319-9C71-DD82B41A5926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E56E5EB-BBFF-4319-9C71-DD82B41A5926}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09B109CB-EA5F-4748-8598-068251626ABD}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E56E5EB-BBFF-4319-9C71-DD82B41A5926} = {94064F4F-2DB8-4F03-A518-617335D566D1}
 	EndGlobalSection
 EndGlobal

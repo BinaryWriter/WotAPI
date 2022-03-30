@@ -10,12 +10,13 @@ namespace Examples.PlayerID
     {
         private static void Main()
         {
-            var Api = new WotApi("TOKEN", WotApi.WotApiRegion.RU);
-            var Player = Api.Get<WotAPI.Api.Accounts.Players>("Test");
+            WotApi.Create("TOKEN", WotApi.WotApiRegion.EU);
             
-            Console.WriteLine(Player.Result[0].AccountID);
-                        
-            // Output: 58586902
+            var player = WotAPI.Api.Accounts.Players.Get("Test")[0];
+            
+            Console.WriteLine(player.AccountID);
+            
+            // Вывод в консоль: '58586902'
         }
     }
 }
@@ -31,12 +32,13 @@ namespace Examples.ClanID
     {
         private static void Main()
         {
-            var Api = new WotApi("TOKEN", WotApi.WotApiRegion.RU);
-            var Clan = Api.Get<WotAPI.Api.Clans.Clans>("Test");
+            WotApi.Create("TOKEN", WotApi.WotApiRegion.EU);
             
-            Console.WriteLine(Clan.Result[0].ClanID);
-                        
-            // Output: 36755
+            var clan = WotAPI.Api.Clans.Clans.Get("Test")[0];
+            
+            Console.WriteLine(clan.ClanID);
+            
+            // Вывод в консоль: '36755'
         }
     }
 }
@@ -52,12 +54,13 @@ namespace Examples.TankName
     {
         private static void Main()
         {
-            var Api = new WotApi("TOKEN", WotApi.WotApiRegion.RU);
-            var Tank = Api.Get<WotAPI.Api.Tankopedia.Vehicle.Info>(1537);
+            WotApi.Create("TOKEN", WotApi.WotApiRegion.EU);
             
-            Console.WriteLine(Tank.Result.Info.ShortName);
-                        
-            // Output: Т-28
+            var tank = WotAPI.Api.Tankopedia.Vehicle.Info.Get(1537);
+            
+            Console.WriteLine(tank.Info.ShortName);
+            
+            // Вывод в консоль: 'T-28'
         }
     }
 }
