@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Clans.Clan;
 
-[Response("https://api.worldoftanks.ru/wot/clans/glossary/")]
+[Response("https://{region_site}/wot/clans/glossary/")]
 public class Glossary : ResponseClass<Glossary.Data>
 {
 	public class Data

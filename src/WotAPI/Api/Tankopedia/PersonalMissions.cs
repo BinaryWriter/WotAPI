@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Tankopedia;
 
-[Response("https://api.worldoftanks.ru/wot/encyclopedia/personalmissions/")]
+[Response("https://{region_site}/wot/encyclopedia/personalmissions/")]
 public class PersonalMissions : ResponseClass<PersonalMissions.Data>
 {
 	public class Data

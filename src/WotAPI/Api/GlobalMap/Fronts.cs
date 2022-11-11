@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.GlobalMap;
 
-[Response("https://api.worldoftanks.ru/wot/globalmap/fronts/")]
+[Response("https://{region_site}/wot/globalmap/fronts/")]
 public class Fronts : ResponseClass<Fronts.Front[]>
 {
 	public class Front

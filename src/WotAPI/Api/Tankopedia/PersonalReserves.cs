@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Tankopedia;
 
-[Response("https://api.worldoftanks.ru/wot/encyclopedia/boosters/")]
+[Response("https://{region_site}/wot/encyclopedia/boosters/")]
 public class PersonalReserves : ResponseClass<Dictionary<string, PersonalReserves.Reserve>>
 {
 	public class Reserve

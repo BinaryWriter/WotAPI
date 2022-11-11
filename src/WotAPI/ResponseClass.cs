@@ -48,12 +48,16 @@ public class ResponseClass<TDataClass>
 			? $"?application_id={api.ApplicationId}&page_no{pageNumber}"
 			: $"&application_id={api.ApplicationId}&page_no={pageNumber}");
 
-		if (parameters != null)
+        if (parameters != null)
 			url += $"&{string.Join("&", parameters.Select(parameter => $"{parameter.Key}={parameter.Value}"))}";
 
-		url = url.Replace(".ru/", $".{api.Region}/");
+        //url = url.Replace(".ru/", $".{api.Region}/");
+        if (api.Region == $"{WotApi.WotApiRegion.RuBy}".ToLower())
+            url = url.Replace("{region_site}", "api.tanki.su");
+        else
+            url = url.Replace("{region_site}", $"api.worldoftanks.{api.Region}");
 
-		if (search != null)
+        if (search != null)
 		{
 			url = url.Replace("{search}", search.ToString());
 		}

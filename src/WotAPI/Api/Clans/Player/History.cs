@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Clans.Player;
 
-[Response("https://api.worldoftanks.ru/wot/clans/memberhistory/?account_id={search}", true)]
+[Response("https://{region_site}/wot/clans/memberhistory/?account_id={search}", true)]
 public class History : ResponseClass<History.Data>
 {
 	public class Data

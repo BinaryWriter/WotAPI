@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Tankopedia;
 
-[Response("https://api.worldoftanks.ru/wot/encyclopedia/info/")]
+[Response("https://{region_site}/wot/encyclopedia/info/")]
 public class Info : ResponseClass<Info.Data>
 {
 	public class Data

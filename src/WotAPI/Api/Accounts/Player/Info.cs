@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Accounts.Player;
 
-[Response("https://api.worldoftanks.ru/wot/account/info/?account_id={search}", true)]
+[Response("https://{region_site}/wot/account/info/?account_id={search}", true)]
 public class Info : ResponseClass<Info.Data>
 {
 	public class Data

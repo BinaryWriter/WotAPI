@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Tankopedia;
 
-[Response("https://api.worldoftanks.ru/wot/encyclopedia/achievements/")]
+[Response("https://{region_site}/wot/encyclopedia/achievements/")]
 public class Achievements : ResponseClass<Dictionary<string, Achievements.Achievement>>
 {
 	public class Achievement

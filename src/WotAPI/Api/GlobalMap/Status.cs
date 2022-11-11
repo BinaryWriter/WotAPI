@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.GlobalMap;
 
-[Response("https://api.worldoftanks.ru/wot/globalmap/info/")]
+[Response("https://{region_site}/wot/globalmap/info/")]
 public class Status : ResponseClass<Status.Data>
 {
 	public class Data

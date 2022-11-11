@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Accounts.Player;
 
-[Response("https://api.worldoftanks.ru/wot/account/achievements/?account_id={search}", true)]
+[Response("https://{region_site}/wot/account/achievements/?account_id={search}", true)]
 public class Achievements : ResponseClass<Achievements.Data>
 {
 	public class Data
