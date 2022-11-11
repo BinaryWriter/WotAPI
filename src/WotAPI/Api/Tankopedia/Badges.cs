@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Tankopedia;
 
-[Response("https://api.worldoftanks.ru/wot/encyclopedia/badges/")]
+[Response("https://{region_site}/wot/encyclopedia/badges/")]
 public class Badges : ResponseClass<Dictionary<string, Badges.Badge>>
 {
 	public class Badge

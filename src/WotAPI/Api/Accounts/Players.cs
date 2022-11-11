@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Accounts;
 
-[Response("https://api.worldoftanks.ru/wot/account/list/?search={search}")]
+[Response("https://{region_site}/wot/account/list/?search={search}")]
 public class Players : ResponseClass<Players.Player[]>
 {
 	public class Player

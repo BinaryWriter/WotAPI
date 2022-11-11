@@ -7,7 +7,8 @@ public class WotApi
 		Ru,
 		Eu,
 		Com,
-		Asia
+		Asia,
+		RuBy
 	}
 
 	public static WotApi? Current;

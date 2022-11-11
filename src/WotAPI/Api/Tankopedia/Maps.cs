@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Tankopedia;
 
-[Response("https://api.worldoftanks.ru/wot/encyclopedia/arenas/")]
+[Response("https://{region_site}/wot/encyclopedia/arenas/")]
 public class Maps : ResponseClass<Maps.Map>
 {
 	public class Map

@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Clans;
 
-[Response("https://api.worldoftanks.ru/wot/clans/list/?search={search}")]
+[Response("https://{region_site}/wot/clans/list/?search={search}")]
 public class Clans : ResponseClass<Clans.Clan[]>
 {
 	public class Clan

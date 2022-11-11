@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.GlobalMap.Clan;
 
-[Response("https://api.worldoftanks.ru/wot/globalmap/claninfo/?clan_id={search}", true)]
+[Response("https://{region_site}/wot/globalmap/claninfo/?clan_id={search}", true)]
 public class Info : ResponseClass<Info.Data>
 {
 	public class Data

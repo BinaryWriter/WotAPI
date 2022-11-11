@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Tankopedia.Crew;
 
-[Response("https://api.worldoftanks.ru/wot/encyclopedia/crewskills/")]
+[Response("https://{region_site}/wot/encyclopedia/crewskills/")]
 public class Skills : ResponseClass<Dictionary<string, Skills.CrewSkill>>
 {
 	public class CrewSkill

@@ -2,7 +2,7 @@
 
 namespace WotAPI.Api.Strongholds.Clan;
 
-[Response("https://api.worldoftanks.ru/wot/stronghold/claninfo/?clan_id={search}", true)]
+[Response("https://{region_site}/wot/stronghold/claninfo/?clan_id={search}", true)]
 public class Info : ResponseClass<Info.Data>
 {
 	public class Data
